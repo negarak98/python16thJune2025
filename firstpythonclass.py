@@ -79,9 +79,4 @@ elif welcome == "w":
 elif welcome == "b":
     print(balance)
 
-    elif welcome == "e":
-        print("Thank you for using BDC, goodbye!")
-        break
-
-    else:
-        print("Invalid response, please try again.")
+    
