@@ -11,10 +11,9 @@ def multiply(a, b):
 
 # Function for division
 def divide(a, b):
-    if b == 0:
-        return "Cannot divide by zero!"
-    return a / b
+    return "Error: Division by zero" if b == 0 else a / b
 
+# Main calculator function with loop
 def calculator():
     while True:
         op = input("Choose operation (+, -, *, / or type 'exit' to quit): ")
@@ -42,3 +41,6 @@ def calculator():
             print("Result:", divide(a, b))
         else:
             print("Invalid operation.")
+
+# Start calculator
+calculator()
