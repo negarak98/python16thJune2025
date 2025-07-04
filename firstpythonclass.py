@@ -87,15 +87,18 @@ else:
 
 
 
-
-    def add_three_numbers(a, b, c):
+def add_three_numbers(a, b, c):
     return a + b + c
 
 result_of_three_number = add_three_numbers(10, 5, 10)
 print("The sum of three numbers is:", result_of_three_number)
 
+
+
+
+
 def add_numbers(a, b):
-    return a + b
+    return int(a + b)
 
 # Taking input from user and adding two numbers
 number1 = int(input("Give me the first number: "))
