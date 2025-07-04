@@ -48,3 +48,16 @@ location = input("Where are you located? ")
 
 # 3. Output final message
 print(f"\nI, {name}, from {location}, working as a {job}, with the salary of {salary}, would love to work in cloud and AI.")
+
+# Print prime numbers from 1 to 100
+
+print("Prime numbers from 1 to 100 are:")
+
+for num in range(2, 101):  # Start from 2, as 1 is not a prime number
+    is_prime = True
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num)
