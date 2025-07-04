@@ -41,7 +41,7 @@ def check_palindrome():
 check_palindrome()
 
  
- def add(a, b):
+def add(a, b):
     return a + b
 
 # Function for subtraction
