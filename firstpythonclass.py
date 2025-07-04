@@ -1,46 +1,14 @@
-def add(a, b):
-    return a + b
 
-# Function for subtraction
-def subtract(a, b):
-    return a - b
 
-# Function for multiplication
-def multiply(a, b):
-    return a * b
 
-# Function for division
-def divide(a, b):
-    return "Error: Division by zero" if b == 0 else a / b
+weather = input("How does the weather look today?? ")
 
-# Main calculator function with loop
-def calculator():
-    while True:
-        op = input("Choose operation (+, -, *, / or type 'exit' to quit): ")
-        
-        if op.lower() == "exit":
-            print("Goodbye!")
-            break
+if weather == "hot":
+    print(" stay hydrated! ")
+elif weather == "cold":
+    print("grab ur hot drink.")
+elif weather == "rainy":
+    print("dont forget ur umbrella. 🌧️☔")
+else:
+    print("Hmm, sorry didn’t get you please try again! ")
 
-        # Ask for numbers
-        try:
-            a = float(input("First number: "))
-            b = float(input("Second number: "))
-        except ValueError:
-            print("Please enter valid numbers!")
-            continue
-
-        # Choose operation
-        if op == "+":
-            print("Result:", add(a, b))
-        elif op == "-":
-            print("Result:", subtract(a, b))
-        elif op == "*":
-            print("Result:", multiply(a, b))
-        elif op == "/":
-            print("Result:", divide(a, b))
-        else:
-            print("Invalid operation.")
-
-# Start calculator
-calculator()
