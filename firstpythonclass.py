@@ -28,10 +28,9 @@ num = int(input("Enter a number: "))
 
 if num % 2 == 0:
 
-    print("Even")
+    print("free to go")
 
 else:
 
-    print("Odd")
- 
+    print("you are in prison")
  
