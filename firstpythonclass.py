@@ -61,3 +61,20 @@ for num in range(2, 101):  # Start from 2, as 1 is not a prime number
             break
     if is_prime:
         print(num)
+
+
+        balance = 0
+welcome = input("Welcome to BDC would you like do deposit (d), withdraw (w), check balance (b), exit (e)? ")
+
+if welcome == "d":
+    deposit = int(input("How much would you like to deposit? "))
+    balance = balance + deposit
+    print("Deposited successfully!")
+
+elif welcome == "w":
+    withdraw = int(input("How much would you like to withdraw? "))
+    balance = balance - withdraw
+    print("Your balance is now: " + str(balance))
+
+elif welcome == "b":
+    print(balance)
