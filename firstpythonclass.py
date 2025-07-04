@@ -34,3 +34,17 @@ else:
 
     print("you are in prison")
  
+
+
+# 1. Print numbers from 1 to 1000
+for i in range(1, 1001):
+    print(i)
+
+# 2. Ask user input
+name = input("\nWhat is your name? ")
+job = input("Thank you, what is your job? ")
+salary = input("What is your salary? ")
+location = input("Where are you located? ")
+
+# 3. Output final message
+print(f"\nI, {name}, from {location}, working as a {job}, with the salary of {salary}, would love to work in cloud and AI.")
