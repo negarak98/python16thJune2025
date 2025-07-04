@@ -79,4 +79,29 @@ elif welcome == "w":
 elif welcome == "b":
     print(balance)
 
-    
+    print("Welcome to the Investment Options System!")
+print("Available investment options:")
+print("1. Fixed Deposit: Minimum $100")
+print("2. Stock Market Fund: Minimum $200")
+print("3. Crypto Basket: Minimum $50")
+
+option = int(input("Choose an option (1–3): "))
+amount = float(input("Enter investment amount: "))
+
+if option == 1:
+    if amount < 100:
+        print("Minimum amount for Fixed Deposit is $100.")
+    else:
+        print("Investment in Fixed Deposit confirmed.")
+elif option == 2:
+    if amount < 200:
+        print("Minimum amount for Stock Market Fund is $200.")
+    else:
+        print("Investment in Stock Market Fund confirmed.")
+elif option == 3:
+    if amount < 50:
+        print("Minimum amount for Crypto Basket is $50.")
+    else:
+        print("Investment in Crypto Basket confirmed.")
+else:
+    print("Invalid option selected.")
