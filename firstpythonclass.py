@@ -1,44 +1,4 @@
 
-print("hello world")
-print ( [1,2,3,4,5,6,7,8,9,10])
-
-name = input ("what is your name?")
-print("hello, " + name + "!")
-
-
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-print("Sum is:", a + b)
-
-for i in range(1, 11):
-
-    print(i)
-
- 
-a = 5
-
-b = 10
-
-c = 3
-
-print("Largest is", max(a, b, c))
-
-
-num = int(input("Enter a number: "))
-
-if num % 2 == 0:
-
-    print("free to go")
-
-else:
-
-    print("you are in prison")
- 
-
-
-# 1. Print numbers from 1 to 1000
-for i in range(1, 1001):
-    print(i)
 
 # 2. Ask user input
 name = input("\nWhat is your name? ")
@@ -105,3 +65,65 @@ elif option == 3:
         print("Investment in Crypto Basket confirmed.")
 else:
     print("Invalid option selected.")
+
+
+    # Define food items and their calories
+calorie_chart = {
+    "egg": 70,
+    "carrot": 20,
+    "nutella": 1.0,         # per gram
+    "toast": 80,
+    "banana": 90,
+    "chicken breast": 1.65, # per gram
+    "rice": 200,
+    "apple": 95,
+    "milk": 120,
+    "yogurt": 1.0           # per gram
+}
+
+# Which food uses grams vs units
+unit_type = {
+    "egg": "unit",
+    "carrot": "unit",
+    "nutella": "g",
+    "toast": "unit",
+    "banana": "unit",
+    "chicken breast": "g",
+    "rice": "unit",
+    "apple": "unit",
+    "milk": "unit",
+    "yogurt": "g"
+}
+
+def get_calories(meal):
+    food = input(f"\nEnter a food item for {meal}: ").strip().lower()
+    quantity = float(input("Enter quantity (e.g., 2 eggs, 100g Nutella): "))
+    
+    # normalize food
+    if food.endswith('s') and food not in calorie_chart:
+        food = food[:-1]
+
+    if food in calorie_chart:
+        unit = unit_type[food]
+        if unit == "g":
+            calories = quantity * calorie_chart[food]
+        else:
+            calories = quantity * calorie_chart[food]
+    else:
+        print(f"Unknown food item: {food}")
+        return 0
+    print(f"{meal.capitalize()} Calories: {calories:.2f} kcal")
+    return calories
+
+print("Welcome to the Meal Calorie Calculator!")
+print("Available food items:")
+print("Egg, Carrot, Nutella (100g), Toast, Banana, Chicken Breast (100g), Rice, Apple, Milk, Yogurt (100g)")
+
+# Get calories for each meal
+breakfast = get_calories("breakfast")
+lunch = get_calories("lunch")
+dinner = get_calories("dinner")
+
+total = breakfast + lunch + dinner
+
+print(f"\nTotal Calories for the Day: {total:.2f} kcal")
